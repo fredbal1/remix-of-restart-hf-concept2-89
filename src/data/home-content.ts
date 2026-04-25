@@ -1,7 +1,7 @@
 export const HOME_CONTENT = {
   hero: {
     eyebrow: "ARCHITECTURE INTÉRIEURE & PROJECTION 3D",
-    title: "Visualisez votre intérieur\navant d'engager les travaux.",
+    title: "Visualisez votre\nintérieur avant\nd'engager les travaux.",
     text: "HFconcept conçoit, projette et sécurise vos choix d'aménagement grâce aux plans, aux rendus 3D et à un accompagnement adapté à votre projet.",
     ctaPrimary: "Parler de mon projet",
     ctaSecondary: "Trouver la bonne formule",

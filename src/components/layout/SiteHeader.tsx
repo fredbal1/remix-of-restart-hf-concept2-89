@@ -86,6 +86,7 @@ export function SiteHeader() {
     }
   }, []);
 
+  const isHome = normalizePath(location.pathname) === "/";
   const isActive = (href: string) => isActivePath(location.pathname, href);
 
   return (
@@ -93,6 +94,7 @@ export function SiteHeader() {
       <div
         className={cn(
           "header-shell",
+          isHome && "header-shell--home",
           scrolled && "header-shell--scrolled"
         )}
       >
@@ -137,8 +139,18 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <div className="hidden lg:block lg:pl-6 lg:border-l lg:border-hf-divider-on-dark/20">
-            <ButtonLink href="/contact/" variant="primary" size="md" className="shrink-0">
+          <div
+            className={cn(
+              "hidden lg:block lg:pl-6 lg:border-l",
+              isHome ? "lg:border-[#211713]/10" : "lg:border-hf-divider-on-dark/20"
+            )}
+          >
+            <ButtonLink
+              href="/contact/"
+              variant="primary"
+              size="md"
+              className={cn("shrink-0", isHome && "header-home-cta")}
+            >
               Parler de votre projet
             </ButtonLink>
           </div>
