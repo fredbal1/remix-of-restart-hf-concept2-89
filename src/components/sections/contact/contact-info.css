@@ -1,0 +1,242 @@
+/* ── Contact Info Panel — pass 4 ── */
+
+.contact-info-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-info-block {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 1.15rem;
+  border-radius: calc(var(--radius-lg) - 0.02rem);
+  background:
+    linear-gradient(160deg, hsl(0 0% 100% / 0.74) 0%, hsl(0 0% 100% / 0.24) 28%, transparent 100%),
+    linear-gradient(180deg, hsl(var(--brand-accent) / 0.05) 0%, transparent 28%),
+    hsl(var(--brand-accent) / 0.04);
+  border: 1px solid hsl(var(--brand-accent) / 0.12);
+  box-shadow:
+    0 22px 40px -30px hsl(24 14% 10% / 0.16),
+    inset 0 1px 0 hsl(0 0% 100% / 0.42);
+}
+
+.contact-info-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, hsl(0 0% 100% / 0.16) 0%, transparent 18%),
+    radial-gradient(circle at top left, hsl(var(--brand-accent) / 0.12), transparent 30%);
+  pointer-events: none;
+}
+
+.contact-info-block > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-info-block--primary {
+  background:
+    linear-gradient(160deg, hsl(0 0% 100% / 0.82) 0%, hsl(0 0% 100% / 0.28) 28%, transparent 100%),
+    linear-gradient(180deg, hsl(var(--brand-accent) / 0.08) 0%, transparent 28%),
+    hsl(var(--brand-accent) / 0.05);
+}
+
+.contact-info-block-head {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info-block-title {
+  font-family: var(--font-display);
+  font-size: 0.83rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: hsl(var(--brand-accent-deep) / 0.74);
+  white-space: nowrap;
+}
+
+.contact-info-block-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--brand-accent) / 0.24) 0%,
+    hsl(var(--brand-accent) / 0.08) 42%,
+    transparent 100%
+  );
+}
+
+.contact-info-stack {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-info-row {
+  padding: 0.95rem 1rem;
+  border-radius: calc(var(--radius-md) - 0.02rem);
+  border: 1px solid hsl(var(--brand-accent) / 0.1);
+  background:
+    linear-gradient(180deg, hsl(0 0% 100% / 0.78) 0%, hsl(0 0% 100% / 0.24) 100%),
+    linear-gradient(155deg, hsl(var(--brand-accent) / 0.06), transparent 60%);
+  box-shadow:
+    0 18px 30px -24px hsl(24 14% 10% / 0.16),
+    inset 0 1px 0 hsl(0 0% 100% / 0.5);
+  text-decoration: none;
+  transition:
+    border-color var(--duration-fast),
+    background-color var(--duration-fast),
+    box-shadow var(--duration-fast),
+    transform var(--duration-fast);
+}
+
+.contact-info-row:hover {
+  border-color: hsl(var(--brand-accent) / 0.2);
+  background:
+    linear-gradient(180deg, hsl(0 0% 100% / 0.88) 0%, hsl(0 0% 100% / 0.28) 100%),
+    linear-gradient(155deg, hsl(var(--brand-accent) / 0.08), transparent 60%);
+  box-shadow:
+    0 24px 38px -26px hsl(24 14% 10% / 0.18),
+    inset 0 1px 0 hsl(0 0% 100% / 0.52);
+  transform: translateY(-1px);
+}
+
+.contact-info-row-copy {
+  min-width: 0;
+  display: grid;
+  gap: 0.12rem;
+}
+
+.contact-info-row-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: hsl(var(--brand-accent-deep) / 0.58);
+}
+
+.contact-info-row-value {
+  overflow-wrap: anywhere;
+}
+
+.contact-info-icon-box {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: calc(var(--radius-md) - 0.02rem);
+  background:
+    linear-gradient(180deg, hsl(0 0% 100% / 0.18), transparent 100%),
+    hsl(var(--brand-accent) / 0.14);
+  border: 1px solid hsl(var(--brand-accent) / 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.26);
+  transition: background-color var(--duration-micro), transform var(--duration-micro);
+}
+
+.group:hover .contact-info-icon-box {
+  background-color: hsl(var(--brand-accent) / 0.2);
+  transform: translateY(-1px);
+}
+
+.contact-info-commitments {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.contact-info-commitment {
+  padding: 0.9rem 0.95rem;
+  border-radius: calc(var(--radius-md) - 0.04rem);
+  border: 1px solid hsl(var(--brand-accent) / 0.08);
+  background:
+    linear-gradient(180deg, hsl(0 0% 100% / 0.62) 0%, hsl(0 0% 100% / 0.16) 100%),
+    hsl(var(--brand-accent) / 0.03);
+}
+
+.contact-info-commitment-icon {
+  width: 1.95rem;
+  height: 1.95rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: hsl(var(--brand-accent) / 0.12);
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.32);
+}
+
+.contact-info-quote {
+  position: relative;
+  padding: 1.15rem 1.05rem 1.15rem 1.2rem;
+  border-radius: calc(var(--radius-md) - 0.02rem);
+  border: 1px solid hsl(var(--brand-accent) / 0.12);
+  background:
+    linear-gradient(180deg, hsl(0 0% 100% / 0.72) 0%, hsl(0 0% 100% / 0.18) 100%),
+    hsl(var(--brand-accent) / 0.04);
+}
+
+.contact-info-quote::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    180deg,
+    hsl(var(--brand-accent) / 0.68) 0%,
+    hsl(var(--brand-accent) / 0.16) 100%
+  );
+}
+
+.contact-info-quote p {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-style: italic;
+  line-height: 1.45;
+  color: hsl(var(--text-strong));
+}
+
+.contact-info-quote cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: hsl(var(--brand-accent-deep) / 0.72);
+  margin-top: 0.65rem;
+}
+
+.contact-info-social-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.contact-info-panel-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.contact-info-panel-chip {
+  min-height: 2.9rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background:
+    linear-gradient(180deg, hsl(0 0% 100% / 0.72) 0%, hsl(0 0% 100% / 0.18) 100%),
+    hsl(var(--brand-accent) / 0.04);
+  box-shadow:
+    0 16px 28px -24px hsl(24 14% 10% / 0.12),
+    inset 0 1px 0 hsl(0 0% 100% / 0.42);
+  transition-property: background-color, border-color, box-shadow, transform;
+}
+
+.contact-info-panel-chip:hover {
+  border-color: hsl(var(--brand-accent) / 0.26);
+  transform: translateY(-1px);
+  box-shadow:
+    0 20px 32px -24px hsl(24 14% 10% / 0.16),
+    inset 0 1px 0 hsl(0 0% 100% / 0.46);
+}

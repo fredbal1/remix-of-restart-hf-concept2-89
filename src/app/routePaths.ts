@@ -1,0 +1,17 @@
+export const routePaths = {
+  home: "/",
+  realisations: "/realisations",
+  realisationsCategorie: "/realisations/categorie/:slug",
+  services: "/services",
+  serviceDetail: "/services/:slug",
+  studio: "/studio",
+  realisationDetail: "/realisations/:slug",
+  contact: "/contact",
+  zoneIntervention: "/zones-intervention/:slug",
+  merci: "/merci",
+  mentionsLegales: "/mentions-legales",
+  politiqueConfidentialite: "/politique-de-confidentialite",
+  error500: "/500",
+  error404: "/404",
+  wildcard: "*",
+} as const;

@@ -1,0 +1,9 @@
+/* Merci hero image frame */
+.merci-hero-frame {
+  overflow: hidden;
+  border-radius: var(--radius-default);
+  border: 1px solid hsl(var(--brand-accent) / 0.24);
+  box-shadow:
+    var(--shadow-depth),
+    0 0 0 1px hsl(var(--brand-accent) / 0.1);
+}

@@ -1,0 +1,113 @@
+.proof-band {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(1.15rem, 2vw, 1.6rem) 0;
+  border-top: 1px solid hsl(var(--brand-accent) / 0.1);
+  border-bottom: 1px solid hsl(var(--brand-accent) / 0.1);
+}
+
+.proof-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 16%, hsl(var(--brand-accent) / 0.08), transparent 20%),
+    radial-gradient(circle at 86% 12%, hsl(0 0% 100% / 0.28), transparent 16%);
+  pointer-events: none;
+}
+
+.proof-band__shell {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 0.7rem;
+  border-radius: calc(var(--radius-xl) + 0.08rem);
+  border: 1px solid hsl(var(--brand-accent) / 0.16);
+  background:
+    linear-gradient(160deg, hsl(0 0% 100% / 0.52) 0%, hsl(0 0% 100% / 0.16) 24%, transparent 100%),
+    linear-gradient(180deg, hsl(var(--brand-accent) / 0.05) 0%, transparent 24%);
+  box-shadow:
+    0 34px 78px -44px hsl(24 16% 10% / 0.2),
+    inset 0 1px 0 hsl(0 0% 100% / 0.3);
+}
+
+.proof-band__shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, hsl(0 0% 100% / 0.16) 0%, transparent 18%),
+    radial-gradient(circle at top left, hsl(var(--brand-accent) / 0.12), transparent 30%);
+  pointer-events: none;
+}
+
+.proof-band__grid {
+  gap: 0.75rem;
+}
+
+.proof-band__item {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 9rem;
+  padding: 1.35rem 1rem;
+  border-radius: calc(var(--radius-lg) - 0.02rem);
+  border: 1px solid hsl(var(--brand-accent) / 0.12);
+  background:
+    linear-gradient(180deg, hsl(0 0% 100% / 0.78) 0%, hsl(0 0% 100% / 0.24) 100%),
+    linear-gradient(150deg, hsl(var(--brand-accent) / 0.06), transparent 60%),
+    hsl(0 0% 100% / 0.34);
+  box-shadow:
+    0 22px 38px -30px hsl(24 16% 10% / 0.18),
+    inset 0 1px 0 hsl(0 0% 100% / 0.5);
+}
+
+.proof-band__item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, hsl(0 0% 100% / 0.14) 0%, transparent 18%),
+    radial-gradient(circle at top right, hsl(var(--brand-accent) / 0.12), transparent 26%);
+  pointer-events: none;
+}
+
+.proof-band__value,
+.proof-band__label {
+  position: relative;
+  z-index: 1;
+}
+
+.proof-band__value {
+  margin-bottom: 0.8rem;
+}
+
+.proof-band__label {
+  max-width: 18ch;
+}
+
+@media (min-width: 640px) {
+  .proof-band__grid {
+    gap: 0.9rem;
+  }
+
+  .proof-band__item {
+    min-height: 10rem;
+    padding: 1.5rem 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .proof-band__shell {
+    padding: 0.95rem;
+  }
+
+  .proof-band__grid {
+    gap: 1rem;
+  }
+
+  .proof-band__item {
+    min-height: 10.75rem;
+    padding: 1.65rem 1.15rem;
+  }
+}
