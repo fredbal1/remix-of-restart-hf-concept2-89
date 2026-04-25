@@ -34,7 +34,7 @@ describe("Route rendering", () => {
     expect(
       await screen.findByRole(
         "heading",
-        { name: /transformons vos espaces/i },
+        { name: /visualisez votre intérieur/i },
         { timeout: 10000 }
       )
     ).toBeInTheDocument();

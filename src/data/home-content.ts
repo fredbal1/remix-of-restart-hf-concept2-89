@@ -1,14 +1,16 @@
 export const HOME_CONTENT = {
   hero: {
-    eyebrow: "Studio d'architecture intérieure",
-    title: "Transformons\nvos espaces",
-    text: "Validez les bons choix avant travaux grâce à des projections 3D photoréalistes claires, précises et rassurantes.",
-    ctaPrimary: "Parler de votre projet",
-    ctaSecondary: "Voir les réalisations",
-    proofs: [
-      { value: "15+", label: "ans d'expérience" },
-      { value: "3D", label: "projection immersive" },
-      { value: "Sur mesure", label: "accompagnement" },
+    eyebrow: "ARCHITECTURE INTÉRIEURE & PROJECTION 3D",
+    title: "Visualisez votre intérieur\navant d'engager les travaux.",
+    text: "HFconcept conçoit, projette et sécurise vos choix d'aménagement grâce aux plans, aux rendus 3D et à un accompagnement adapté à votre projet.",
+    ctaPrimary: "Parler de mon projet",
+    ctaSecondary: "Trouver la bonne formule",
+    servicesLine: "Conseil · Conception 3D · Projet complet · À distance",
+    proofBar: [
+      "15+ ans d’expérience",
+      "Plans & rendus 3D sur mesure",
+      "Paris, Île-de-France & à distance",
+      "Premier conseil dès 99 €",
     ],
   },
   trustBand: {
